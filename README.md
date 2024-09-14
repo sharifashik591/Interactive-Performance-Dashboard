@@ -1,3 +1,4 @@
+
 # **Power BI Interactive Dashboard for Business Decision-Making**
 
 ## **Project Overview**
@@ -123,3 +124,6 @@ Feel free to explore the dashboard and reach out if you have any questions or wo
 ---
 
 **Thank you for taking the time to explore this project!**
+
+
+![Green Minimalist Happy Birthday Photo Collage](https://github.com/user-attachments/assets/4b93b737-6fc6-46b7-9bfb-e56151896c5e)
