@@ -31,17 +31,18 @@ The dashboard is designed to support executives, product managers, and analysts 
 
 ### 1. **Profit Summary**:
    - **Metrics**: Total Revenue, Total Profit, Profit Margin (%), Average Revenue per Order.
-   - **Advanced Calculations**: Custom DAX measures were created for metrics like profit margin and average order value, enhancing financial insight.
+   - **Advanced Calculations**: Custom DAX measures were created for metrics like profit margin, average order value (AOV), and monthly revenue growth rate, enhancing financial insight.
    - **Dynamic Filtering**: Users can filter the data by time period (month, quarter), product category, and region to track profitability trends over time.
 
 ### 2. **Customer Insights**:
-   - **Metrics**: Total Customers, Repeat Customer Rate, Average Order Value, Customer Lifetime Value (CLV).
+   - **Metrics**: Total Customers, Repeat Customer Rate, Churn Rate, Customer Lifetime Value (CLV), Lost Customers.
+   - **Advanced Calculations**: DAX measures like average customer lifetime, churn rate, and purchase frequency provide deeper insight into customer retention and acquisition trends.
    - **Interactive Drill-downs**: Analyze customer data by segments such as new vs. returning customers, or by regions to understand demographic behavior.
-   - **Focus on Retention**: CLV and repeat customer rates are used to track long-term customer relationships, helping to target retention strategies.
+   - **Focus on Retention**: CLV and churn rate are used to track long-term customer relationships, helping to target retention strategies.
 
 ### 3. **Product and Price Insights**:
    - **Metrics**: Best-Selling Products, Average Product Price, Top Products by Revenue and Profit Margin.
-   - **Data-Driven Pricing**: Analyzes how pricing impacts product sales and profitability, enabling data-driven decisions on pricing strategies.
+   - **Additional Calculations**: DAX measures like average order fulfillment time and revenue per customer help management make product and pricing decisions based on sales and operational efficiency.
    - **Product Performance**: Identifies high-performing and low-performing products to help management optimize inventory and marketing efforts.
 
 ---
@@ -58,6 +59,12 @@ The dashboard is designed to support executives, product managers, and analysts 
      - **Profit Margin (%)**: `Profit Margin = (Total Profit / Total Revenue) * 100`
      - **Average Revenue Per Order**: `Total Revenue / Number of Orders`
      - **Monthly Revenue Growth**: `([Current Month's Revenue] - [Previous Month's Revenue]) / [Previous Month's Revenue]`
+     - **Average Order Value (AOV)**: Calculation of revenue per order.
+     - **Churn Rate**: Measures customer retention and loss.
+     - **Average Customer Lifetime**: Calculated to understand how long customers remain active.
+     - **Purchase Frequency**: Number of purchases divided by the number of customers.
+     - **Day of Week Analysis**: To analyze sales trends by the day of the week.
+     - **Average Order Fulfillment Time**: Measures efficiency in processing customer orders.
    - Created dynamic measures to allow users to slice and filter data in real-time.
 
 3. **Interactive Visuals**:
@@ -107,9 +114,12 @@ The dashboard is designed to support executives, product managers, and analysts 
 
 ---
 
-## **Conclusion**
-This interactive Power BI dashboard showcases my ability to transform raw data into actionable business insights. It reflects my skills in data analysis, data visualization, and business intelligence. This project highlights my expertise in using Power BI and DAX to create powerful, user-friendly dashboards that drive business growth.
+## **Contact Information**
+Feel free to explore the dashboard and reach out if you have any questions or would like to discuss further!
+
+- **Email**: [sharifashik591@gmail.com](mailto:sharifashik591@gmail.com)
+- **LinkedIn**: [Sharif Ashik](https://www.linkedin.com/in/sharif-ashik/)
 
 ---
 
-**Feel free to explore the dashboard and reach out if you have any questions or would like to discuss further!**
+**Thank you for taking the time to explore this project!**
