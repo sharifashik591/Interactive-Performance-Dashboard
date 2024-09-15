@@ -1,129 +1,135 @@
+# Power BI Interactive Dashboard for Business Decision-Making
 
-# **Power BI Interactive Dashboard for Business Decision-Making**
+## Project Overview
+This project demonstrates my expertise in Power BI by building an interactive dashboard for business stakeholders to make data-driven decisions aimed at growth. Data comes from a company’s ERP system, Google Sheets, and Excel, with some dummy data for confidentiality. The dashboard provides insights into key business areas: **Profit Summary**, **Customer Insights**, and **Product & Price Insights**. It employs advanced data modeling, custom DAX measures, and dynamic visuals to support decision-making.
 
-## **Project Overview**
-This project showcases my proficiency in Power BI by developing an interactive dashboard that helps business stakeholders make data-driven decisions for business growth. The dashboard is built using data from a company’s ERP system, with some dummy data for confidentiality. 
-
-The dashboard was designed to provide insights into key business areas, including **Profit Summary**, **Customer Insights**, and **Product and Price Insights**. It incorporates advanced data modeling techniques, custom measures using DAX, and visually compelling charts to enhance decision-making.
-
----
-
-## **Data Source**
-- **Source**: The data used in this dashboard is sourced from a **MySQL database**, which contains various tables related to the company's ERP system. 
+## Data Source and Automation
+- **Source**: Data is sourced from various systems, including the company’s ERP system, Google Sheets, and Excel files.
+- **Data Collection Process**: I developed Python scripts to automatically scrape, process, and update data into a database on a daily basis. A scheduler is used to trigger the scripts every day to ensure that the data remains up-to-date. This automation streamlines the process and feeds fresh data into the Power BI dashboard.
 - **Data Sensitivity**: Some data in the project has been anonymized or replaced with dummy data to maintain confidentiality.
-- **Data Preprocessing**: Before importing data into Power BI, extensive data cleaning, transformation, and modeling were performed to ensure accuracy and consistency for business analysis.
+- **Data Preprocessing**: The Python scripts perform data cleaning, transformation, and processing to ensure accuracy and consistency for business analysis before being ingested by Power BI.
 
----
+## Purpose of the Dashboard
+This dashboard supports executives, product managers, and analysts in:
+- **Monitoring profitability**
+- **Analyzing customer behavior** to enhance retention
+- **Optimizing product performance and pricing** strategies
 
-## **Purpose of the Dashboard**
-The dashboard is designed to support executives, product managers, and analysts in making informed business decisions by providing insights into:
-1. **Profitability**
-2. **Customer behavior and segmentation**
-3. **Product pricing and performance trends**
+## Business Objectives
+- Track revenue and profitability across segments.
+- Identify opportunities for customer growth and retention.
+- Assess product performance for higher profitability.
 
-### **Business Objectives**:
-- To monitor revenue and profitability across various business segments.
-- To analyze customer purchase behavior and identify opportunities for customer growth and retention.
-- To assess product performance and optimize pricing strategies for higher profitability.
+## Key Features and Insights
 
----
+### 1. Profit Summary
+- **Metrics**: Total Revenue, Profit, Profit Margin, Avg. Revenue per Order.
+- **Advanced Calculations**: DAX measures for Profit Margin (%), AOV, and Monthly Revenue Growth.
+- **Dynamic Filtering**: Time period, product category, and region.
 
-## **Key Features and Insights**
+### 2. Customer Insights
+- **Metrics**: Total Customers, Repeat Customer Rate, Churn Rate, CLV, Lost Customers.
+- **Advanced Calculations**: Average Customer Lifetime, Churn Rate, Purchase Frequency.
+- **Drill-Downs**: Segment analysis, regional behavior, retention strategies.
 
-### 1. **Profit Summary**:
-   - **Metrics**: Total Revenue, Total Profit, Profit Margin (%), Average Revenue per Order.
-   - **Advanced Calculations**: Custom DAX measures were created for metrics like profit margin, average order value (AOV), and monthly revenue growth rate, enhancing financial insight.
-   - **Dynamic Filtering**: Users can filter the data by time period (month, quarter), product category, and region to track profitability trends over time.
+### 3. Product & Price Insights
+- **Metrics**: Best-Selling Products, Avg. Product Price, Revenue, Profit Margin.
+- **Additional Calculations**: Avg. Order Fulfillment Time, Avg. Revenue per Customer.
+- **Performance Analysis**: Identifying high- and low-performing products.
 
-### 2. **Customer Insights**:
-   - **Metrics**: Total Customers, Repeat Customer Rate, Churn Rate, Customer Lifetime Value (CLV), Lost Customers.
-   - **Advanced Calculations**: DAX measures like average customer lifetime, churn rate, and purchase frequency provide deeper insight into customer retention and acquisition trends.
-   - **Interactive Drill-downs**: Analyze customer data by segments such as new vs. returning customers, or by regions to understand demographic behavior.
-   - **Focus on Retention**: CLV and churn rate are used to track long-term customer relationships, helping to target retention strategies.
+## Technical Details
 
-### 3. **Product and Price Insights**:
-   - **Metrics**: Best-Selling Products, Average Product Price, Top Products by Revenue and Profit Margin.
-   - **Additional Calculations**: DAX measures like average order fulfillment time and revenue per customer help management make product and pricing decisions based on sales and operational efficiency.
-   - **Product Performance**: Identifies high-performing and low-performing products to help management optimize inventory and marketing efforts.
-
----
-
-## **Technical Details**
-
-### **Power BI Features Used**:
+### Power BI Features Used:
 1. **Data Modeling**:
-   - Created calculated columns and tables in Power BI for better data representation and transformation.
-   - Relationships between tables were carefully structured to ensure seamless analysis across multiple datasets.
+   - Calculated columns and tables in Power BI.
+   - Accurate relationships across datasets.
 
-2. **DAX (Data Analysis Expressions)**:
-   - **Custom Measures**: Advanced DAX was used for key calculations, such as:
-     - **Profit Margin (%)**: `Profit Margin = (Total Profit / Total Revenue) * 100`
-     - **Average Revenue Per Order**: `Total Revenue / Number of Orders`
-     - **Monthly Revenue Growth**: `([Current Month's Revenue] - [Previous Month's Revenue]) / [Previous Month's Revenue]`
-     - **Average Order Value (AOV)**: Calculation of revenue per order.
-     - **Churn Rate**: Measures customer retention and loss.
-     - **Average Customer Lifetime**: Calculated to understand how long customers remain active.
-     - **Purchase Frequency**: Number of purchases divided by the number of customers.
-     - **Day of Week Analysis**: To analyze sales trends by the day of the week.
-     - **Average Order Fulfillment Time**: Measures efficiency in processing customer orders.
-   - Created dynamic measures to allow users to slice and filter data in real-time.
+2. **DAX Measures**:
+   - **Profit Margin** = `(Total Profit / Total Revenue) * 100`
+   - **AOV** = `Total Revenue / Number of Orders`
+   - **Churn Rate**: Measures retention and loss.
+   - **Customer Lifetime**: Tracks how long customers remain active.
+   - **Monthly Revenue Growth**: `([Current Month's Revenue] - [Previous Month's Revenue]) / [Previous Month's Revenue]`
 
 3. **Interactive Visuals**:
-   - **Decomposition Tree**: Enables users to drill down into profitability by product, region, and customer segment, supported by AI insights.
-   - **Dynamic Cards and KPIs**: Key metrics like revenue, profit margin, and customer metrics are displayed as dynamic cards that update based on user filters.
+   - **Decomposition Tree**: Drill down by product, region, and customer segment.
+   - **Dynamic Cards and KPIs**: Real-time metric updates based on filters.
 
-4. **Reset Button**:
-   - Implemented a **Reset Icon** that allows users to clear filters and restore the dashboard to its default state with a single click.
+4. **Reset Button**: Clears filters and restores default dashboard state.
 
----
+## Python Automation Process
+- **Data Collection**: Automated Python scripts scrape data from multiple sources like Google Sheets, Excel files, and the ERP system.
+- **Data Processing**: The scripts clean, process, and format the data before updating it in the database used by Power BI.
+- **Daily Automation**: A scheduler runs the Python scripts daily, ensuring the dashboard is always up-to-date with the latest data.
 
-## **Usage Instructions**
+## Usage Instructions
+### How to Use the Dashboard:
+1. **Navigation**:
+   - **Profit Summary**: Overview of revenue, profit, and margins.
+   - **Customer Insights**: Customer behavior and retention.
+   - **Product & Price Insights**: Product performance and pricing strategies.
 
-### **How to Use the Dashboard**:
-1. **Navigate Through the Pages**: The dashboard is divided into three primary sections:
-   - **Profit Summary**: Get a high-level view of revenue, profit, and margin metrics.
-   - **Customer Insights**: Analyze customer behavior, lifetime value, and retention rates.
-   - **Product & Price Insights**: Explore product performance and pricing strategies.
-   
-2. **Filters**: Use filters to slice the data by different time periods (monthly, quarterly), regions, and product categories.
-   - Examples of filters include Date, Customer Segment, Product Category, and Price Range.
+2. **Filters**: Slice data by Date, Customer Segment, Product Category, Price Range.
+   - **Reset Filters**: Use the reset button to clear selections.
 
-3. **Reset Filters**: Use the reset button to clear all filters and return the dashboard to its default state.
+## Project Challenges and Solutions
 
----
+1. **Data Confidentiality**: Resolved through data anonymization and dummy values.
+2. **Complex Data Relationships**: Properly structured for seamless analysis.
+3. **Dynamic Calculations**: Used advanced DAX for real-time insights.
+4. **Automation**: Automated daily data scraping and processing with Python scripts.
 
-## **Project Challenges and Solutions**
+## Skills Demonstrated
+- **Data Modeling**: Structured data relationships to enhance analysis.
+- **Power BI Proficiency**: Expert use of visualizations, DAX, and data modeling.
+- **Python Automation**: Developed and automated scripts to collect, process, and update data daily.
+- **Business Analytics**: Delivered actionable insights for decision-making.
+- **Interactivity**: Designed a user-friendly, dynamic dashboard.
+- **Problem-Solving**: Addressed data confidentiality and integration challenges effectively.
 
-1. **Data Confidentiality**:
-   - Addressed by anonymizing and using dummy data to maintain the integrity and confidentiality of sensitive company information.
+## Project Flowchart
 
-2. **Complex Data Relationships**:
-   - Carefully structured relationships between different tables in Power BI to ensure seamless cross-filtering and accurate aggregation.
+```plaintext
+[Data Sources] 
+   ↓
+(ERP System, Google Sheets, Excel)
+   ↓
+[Python Scripts for Data Collection] 
+   ↓
+(Daily Automation for Scraping and Processing Data)
+   ↓
+[Data Cleaning & Transformation]
+   ↓
+(Ensure Data Quality)
+   ↓
+[Data Loading into MySQL Database]
+   ↓
+(Processed Data Stored in MySQL)
+   ↓
+[Connect Power BI to MySQL Database]
+   ↓
+(Import Data into Power BI)
+   ↓
+[Data Modeling & DAX Calculations]
+   ↓
+(Create Relationships, AOV, Profit Margin, Churn Rate, etc.)
+   ↓
+[Interactive Dashboard Design]
+   ↓
+(Pages: Profit Summary, Customer Insights, Product & Price Insights)
+   ↓
+[Publish Dashboard & Automation]
+   ↓
+(Daily Updates Using Python Scripts & Scheduled Refreshes)
+```
 
-3. **Dynamic Calculations**:
-   - Leveraged advanced DAX functions to create real-time dynamic calculations, allowing end-users to interact with and analyze the data effectively.
 
----
-
-## **Skills Demonstrated**
-
-- **Data Modeling**: Developed a robust data model with accurate relationships to support advanced analysis.
-- **Power BI Proficiency**: Expert-level use of Power BI's capabilities, including visualizations, DAX, and data modeling.
-- **Business Analytics**: Provided meaningful insights to support critical business decision-making.
-- **Interactivity**: Created an interactive, user-focused dashboard that allows for dynamic analysis and filtering.
-- **Problem-Solving**: Overcame challenges related to data integration and confidentiality with smart solutions.
-
----
-
-## **Contact Information**
-Feel free to explore the dashboard and reach out if you have any questions or would like to discuss further!
+## Contact Information
+Feel free to reach out with questions!
 
 - **Email**: [sharifashik591@gmail.com](mailto:sharifashik591@gmail.com)
-- **LinkedIn**: [Sharif Ashik](https://www.linkedin.com/in/sharif-ashik/)
+- **LinkedIn**: [Sharif Ashik](https://www.linkedin.com/in/sharif-ashik)
 
----
-
-**Thank you for taking the time to explore this project!**
 
 
 ![Green Minimalist Happy Birthday Photo Collage](https://github.com/user-attachments/assets/4b93b737-6fc6-46b7-9bfb-e56151896c5e)
